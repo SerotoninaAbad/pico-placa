@@ -6,7 +6,7 @@ node_modules
 Thumbs.db
 
 # Ignore built ts files
-build/**/*
+/lib
 
 # Coverage reports
 coverage

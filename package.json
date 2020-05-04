@@ -1,16 +1,25 @@
 {
   "name": "pico-placa",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Pico y placa predictor",
-  "main": "src/index.ts",
+  "bin": {
+    "pico-placa": "./bin/run"
+  },
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "pico-placa"
+  },
+  "types": "lib/index.d.ts",
   "scripts": {
     "start": "npm run build && node build/index.js",
-    "build": "rimraf ./build && tsc",
+    "build": "rimraf ./lib && tsc",
     "start:dev": "nodemon",
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
-    "test": "jest --forceExit --coverage --verbose"
+    "test": "jest --forceExit --coverage --verbose",
+    "test-watch": "jest --watch",
+    "prepack": "rimraf lib && tsc -b && oclif-dev readme"
   },
   "husky": {
     "hooks": {
@@ -20,9 +29,13 @@
   "author": "Belén Abad",
   "license": "ISC",
   "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@oclif/test": "^1.2.5",
+    "@types/jest": "^25.2.1",
     "@types/node": "^13.13.4",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
+    "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
@@ -36,6 +49,18 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@types/jest": "^25.2.1"
+    "@oclif/command": "^1.6.0",
+    "@oclif/config": "^1.15.1",
+    "@oclif/plugin-help": "^3.0.0",
+    "chalk": "^4.0.0",
+    "enquirer": "^2.3.5",
+    "tslib": "^1.11.1"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
   }
 }
