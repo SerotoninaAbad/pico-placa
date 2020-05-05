@@ -42,7 +42,7 @@ To predict if the car can be on the road or not the CLI will ask for the car's l
 $ pico-placa --plate ABG-8234 --date 2020-05-04 --time 20:45
 ```
 
-![Command flags](https://drive.google.com/uc?id=1zaWNfyGukp5FjIz7Lxh3TCrjkVQnLiXR)
+![Command using flags](https://drive.google.com/uc?id=1zaWNfyGukp5FjIz7Lxh3TCrjkVQnLiXR)
 
 ### Opction2: Execute command without flags
 
@@ -52,15 +52,15 @@ $ pico-placa
 
 The following questions will be prompted.
 
-![Questions will be prompted](https://drive.google.com/uc?id=12L9XIi43Q_Dx714e9UEZlR4XFdN7G2HZ)
+![Questions to be prompted](https://drive.google.com/uc?id=12L9XIi43Q_Dx714e9UEZlR4XFdN7G2HZ)
 
 ## Results
 
 Results will be shown in a **red background** if the car can't be on the road or in a **green background** if the car can be on the road.
 
-![Questions will be prompted](https://drive.google.com/uc?id=1j_Esv6HnK9e8BtnEPyla81vXEOXD7QE2)
+![Result with red background](https://drive.google.com/uc?id=1j_Esv6HnK9e8BtnEPyla81vXEOXD7QE2)
 
-![Questions will be prompted](https://drive.google.com/uc?id=1X3iE2l7pjx7GGHMBMWcR20PGx1gbHesN)
+![Result with green background](https://drive.google.com/uc?id=1X3iE2l7pjx7GGHMBMWcR20PGx1gbHesN)
 
 ## To run tests
 
